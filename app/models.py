@@ -6,7 +6,7 @@ class LoginData(UserMixin, db.Model):
     __tablename__ = "login_data"
     id = db.Column(db.Integer(20), primary_key=True, nullable=False)
     login = db.Column(db.String(20), 'login', nullable=False)
-    login_time = db.Column(db.DateTime, 'login', nullable=False)
+    login_time = db.Column(db.DateTime, 'login_time', nullable=False)
     logout_time = db.Column(db.DateTime, 'logout', nullable=False)
 
 
