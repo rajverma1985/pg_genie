@@ -23,3 +23,9 @@ class GenerateReports(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     report_name = db.Column(db.String(250), nullable=False)
     generate_by = db.Column(db.String(250), unique=True, nullable=False)
+
+
+class Backups(db.Model):
+    backup_id = db.Column(db.UUID, primary_key=True)
+    backup_name = db.Column(db.String(250), nullable=False)
+    backup_time = db.Column(db.DateTime, nullable=False)
