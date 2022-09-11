@@ -16,3 +16,10 @@ class Registration(UserMixin, db.Model):
     name = db.Column(db.String(250), nullable=False)
     email = db.Column(db.String(250), unique=True, nullable=False)
     password = db.Column(db.String(100))
+
+
+class GenerateReports(db.Model):
+    __tablename__ = "Reports"
+    id = db.Column(db.Integer, primary_key=True)
+    report_name = db.Column(db.String(250), nullable=False)
+    generate_by = db.Column(db.String(250), unique=True, nullable=False)
