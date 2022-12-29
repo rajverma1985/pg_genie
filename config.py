@@ -28,7 +28,7 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "pg_genie_test")
+    SQLALCHEMY_DATABASE_URI = "postgresql:///" + os.path.join(basedir, "pg_genie_test")
     IMAGE_UPLOADS = os.path.join(basedir, "uploads")
 
 

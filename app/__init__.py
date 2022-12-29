@@ -1,3 +1,5 @@
+import os
+from urllib.parse import quote_plus
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -9,6 +11,8 @@ from config import Config
 
 db = SQLAlchemy()
 login = LoginManager()
+password = quote_plus(f"{os.environ['DB_PASSWORD']}")
+DB_URI = f"postgresql://{os.environ['DB_USER']}:{password}@{os.environ['DB_SERVER']}/{os.environ['DB']}"
 
 
 # login.login_message = _l('Please log in to access this page.')
@@ -35,7 +39,6 @@ def register_bp(app):
     from app.main import views
     from app.api import views
     from app.auth import views
-
 
 
 def register_logger():
