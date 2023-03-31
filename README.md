@@ -7,4 +7,3 @@
 5. get info on index, vacuum and bloat
 6. get stats info high cpu, long running queries
 7. overall connections dashboard
-8. 
