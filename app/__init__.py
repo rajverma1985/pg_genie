@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
-from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from config import Config
 
@@ -53,7 +53,7 @@ def register_extensions(app):
     login.init_app(app)
     mail = Mail()
     mail.init_app(app)
-    bootstrap = Bootstrap4()
+    bootstrap = Bootstrap()
     bootstrap.init_app(app)
     moment = Moment()
     moment.init_app(app)
